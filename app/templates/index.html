@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<!-- <header>
+			<p>
+				Welcome! Enter your ETH wallet address below and your transaction history will be displayed.
+			</p>
+		</header> -->
+		<div class="dataContainer">
+			<div class="addressContainer">
+				<form>
+					<label for="address">Address</label>
+					<input type="text" id="address" name="Address" placeholder="Enter Address" />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+
+			<div class="txnContainer">
+				{% for i in range(txnData['from_address']|length) %}
+				<div class="transaction">
+					<div class="fromAddress">{{txnData['from_address'][i]|truncate(9)}}</div>
+					<div class="txnArrow">
+						<img src="https://img.icons8.com/material-rounded/48/000000/long-arrow-right.png" />
+					</div>
+					<div class="toAddress">{{txnData['to_address'][i]|truncate(9)}}</div>
+					<div class="txnValue">{{txnData['value'][i]|round(2)}}</div>
+					{% if txnData['from_address'][i] == "0xdd8994fc" %}
+					<div class="txnOutgoing">Outgoing</div>
+					{% else %}
+					<div class="txnIncoming">Incoming</div>
+					{% endif %}
+					<div class="blockTimestamp">{{txnData['block_timestamp'][i]}}</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>
