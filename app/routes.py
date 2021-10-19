@@ -1,10 +1,11 @@
-from flask import render_template
+from flask import request, render_template
 from app import app
 from .query import txnQuery 
 
-@app.route('/')
+####------render default webpage ----####
+@app.route('/', methods=['POST', 'GET'])
 def index():
     return render_template(
         'index.html',
-        txnData = txnQuery(),
+        txnData = txnQuery()
         )

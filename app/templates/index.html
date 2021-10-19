@@ -5,19 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
-		<title>Document</title>
+		<title>Home | ETH Txn Data</title>
 	</head>
 
 	<body>
-		<!-- <header>
-			<p>
-				Welcome! Enter your ETH wallet address below and your transaction history will be displayed.
-			</p>
-		</header> -->
 		<div class="dataContainer">
+			<h1>Welcome!</h1>
+			<p>Enter an ETH wallet address below to display its transaction history</p>
 			<div class="addressContainer">
-				<form>
-					<label for="address">Address</label>
+				<form method="post">
 					<input type="text" id="address" name="Address" placeholder="Enter Address" />
 					<input type="submit" value="Submit" />
 				</form>

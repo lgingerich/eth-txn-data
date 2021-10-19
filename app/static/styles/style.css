@@ -1,9 +1,38 @@
+html,
+body,
+blockquote,
+code,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+	margin: 0;
+	padding: 0;
+}
+button,
+fieldset,
+form,
+input,
+legend,
+textarea,
+select {
+	margin: 0;
+	padding: 0;
+}
+
 header {
 	/* margin: 0; */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center;
+	align-items: start;
 }
 
 body {
@@ -25,6 +54,14 @@ body {
 	background-size: cover;
 }
 
+h1,
+p {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	padding-bottom: 16px;
+}
+
 .dataContainer {
 	display: flex;
 	flex-direction: column;
@@ -41,11 +78,11 @@ body {
 	justify-content: center;
 	align-items: start;
 	width: 100%;
-	padding-bottom: 32px;
+	padding-top: 10px;
 }
 
 input[type="text"] {
-	width: 100%;
+	/* width: 100%; */
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
@@ -55,17 +92,13 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-	width: 100%;
-	background-color: rgba(109, 40, 217); /* CSS Tailwind bg-purple-700 */
-	padding: 14px 20px;
+	/* width: 172px; */
+	background-color: #2563eb; /* CSS Tailwind bg-blue-600 */
+	padding: 12px 20px;
 	margin: 8px 0;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-}
-
-input[type="submit"]:hover {
-	background-color: rgba(109, 40, 217); /* CSS Tailwind bg-purple-700 */
 }
 
 .txnContainer {
