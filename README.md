@@ -1,5 +1,5 @@
 # ETH Transaction Data Dashboard
 
-This dashboard displays transaction data for an inputted ethereum wallet address.
+This dashboard displays transaction data for an inputted ethereum wallet address. It looks and functions similar to an Etherscan clone, but includes accessibility to easily manipulate the transaction data for further analysis.
 
-As this is a rather simple project, adding significant functionality is not envisioned. I am primarily interested in adding NFT profit/loss analysis.
+Adding significant functionality is not planned as this is a rather simple project. I am primarily interested in including overall address statistics and possibly NFT profit/loss analysis.
