@@ -11,7 +11,7 @@ def txnQuery(eth_address):
 
     # Construct query
     query = """
-    SELECT nonce, FORMAT_DATE("%b %d %Y", block_timestamp) AS block_timestamp, from_address, to_address, value/power(10, 18) as value, gas_price/power(10, 18) as gas_price, receipt_gas_used as gas_used
+    SELECT `hash`, nonce, block_timestamp, from_address, to_address, value/power(10, 18) as value, (gas_price/power(10, 18))*receipt_gas_used as txn_fee
     FROM bigquery-public-data.crypto_ethereum.transactions
     WHERE to_address = LOWER(@eth_address) OR from_address = LOWER(@eth_address)
     ORDER BY block_timestamp DESC
