@@ -4,7 +4,7 @@ This dashboard displays transaction data for an inputted ethereum wallet address
 
 ![Demo](https://user-images.githubusercontent.com/82065267/138613538-a2d8e98e-4813-4def-aa23-c4e9baaacaac.gif)
 
-# Tech/Framework Used
+# Tech Stack
 
 **Built with**
 * Python
