@@ -1,8 +1,6 @@
 # ETH Transaction Data Dashboard
 
-This dashboard displays transaction data for an inputted ethereum wallet address. It functions similar to a simple Etherscan clone, but offers an extensible codebase to easily add functionality for further transaction data analysis.
-
-Adding significant functionality is not planned as this is a rather simple project.
+This dashboard displays transaction data for an inputted ethereum wallet address, functioning similarly to a simple Etherscan clone.
 
 ![Demo](https://user-images.githubusercontent.com/82065267/138613538-a2d8e98e-4813-4def-aa23-c4e9baaacaac.gif)
 
@@ -13,7 +11,3 @@ Adding significant functionality is not planned as this is a rather simple proje
 * Flask
 * Google BigQuery
 * [Etherueum ETL]( https://github.com/blockchain-etl/ethereum-etl ) Public Dataset
-
-# Potential Feature Additions
-1. Query and include internal transactions
-2. Add table pagination
